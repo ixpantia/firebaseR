@@ -16,7 +16,7 @@ fire_delete_data <- function(auth_email,
                              database_url,
                              node) {
   
-  token <- obtiene_token(auth_email, auth_password, api_key)
+  token <- get_token(auth_email, auth_password, api_key)
 
   command <- glue("curl -X DELETE '{database_url}/{node}.json?auth={token}'")
   
